@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+
+<style>
+      body {
+        background: linear-gradient(to right, rgb(11, 94, 22), rgb(114, 175, 101) 100%);
+        color: white;
+     }
+     .tableclass {
+         border: solid rgb(17, 70, 19) 20px;
+     }
+     img {
+         width: 350px;
+         height: -100px;
+     }
+     a:link, a:visited {
+         font-weight: bold;
+         text-decoration: none;
+         color: white;
+     }
+     img {
+         border-radius: 50%;
+     }
+     img {
+         width: 600px;
+         height: -100px;
+     }
+</style>
+     
+<body>
+    
+    <table class="tableclass">
+        <tr>
+            <td>
+
+    <form name="theform">
+    <table><br><br>
+        <header style="font-family:cursive; color:white; font-size: 50px;">Currency Converter</header><br><br>
+        <p style="font-family:Arial, Helvetica, sans-serif; color:white; font-size: 30px;">
+        Convert USA Dollars to other currencies.
+        </p>
+
+        <tr>
+            <td rowspan="9"><img src="currency.jpeg" alt="picture of currency"></td>
+            <td style="float: right"><strong>Enter U.S. Dollar Amount</strong></td>
+            <td><input id="dollarFmInput"  type="number" placeholder="Dollar"oninput="dollarConverter(value)" 
+                onchange="dollarConverter(value)">
+        </tr>
+
+        <tr>
+            <td style="float :right"><strong>Euro: $ </strong><span class="Euro"></span></td><br>
+            <td><input name="euroFmInput" size="10"></td>
+        </tr>
+
+        <tr>
+            <td style="float :right"><strong>Pound Sterling: $ </strong><span class="PoundSterling"></span></td><br>
+            <td><input name="poundFmInput" size="10"></td>
+        </tr>
+
+        <tr>
+            <td style="float :right"><strong>Australian Dollar: $ </strong><span class="AustralianDollar"></span></td><br>
+            <td><input name="australianFmInput" size="10"></td>
+        </tr>
+
+        <tr>
+            <td style="float :right"><strong>Mexican Pesos: $ </strong><span class="MexicanPeso"></span></td><br>
+            <td><input name="pesosFmInput" size="10"></td>
+        </tr>
+
+        <tr>
+            <td style="float :right"><strong>Canadian Dollar: $ </strong><span class="CanadianDollar"></span></td><br>
+            <td><input name="canadianFmInput" size="10"></td>
+        </tr>
+
+        <tr>
+            <td style="float :right"><strong>Turkish Lira: $ </strong><span class="TurkishLira"></span></td><br>
+            <td><input name="liraFmInput" size="10"></td>
+        </tr>
+
+        <tr>
+            <td style="float :right"><strong>Japanese Yen: $ </strong> <span class="JapaneseYen"></span></td><br>
+            <td><input name="yenFmInput" size="10"></td>
+        </tr>
+
+        <tr>
+            <td style="float :right"><strong>Swiss Franc: $ </strong><span class="SwissFranc"></span></td><br>
+            <td><input name="francFmInput" size="10"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input style="float: right" type="button" name="calc" value="Calculate" onclick="calculate();">
+                <input style="float: right" type="button" name="clear" value="Clear" onclick="clearinfo();">
+            </td>
+        </tr>
+    </table>
+
+    </td>
+    </tr>
+    </table>
+    <script>
+
+     document.getElementById("demo").innerHTML = 5 + 6;
+
+   function dollarConverter(temp) {
+   document.querySelector(".Euro").innerHTML=(temp*0.84)
+   document.querySelector(".PoundSterling").innerHTML=(temp*0.77)
+   document.querySelector(".AustralianDollar").innerHTML=(temp*1.40)
+   document.querySelector(".MexicanPeso").innerHTML=(temp*20.86)
+   document.querySelector(".CanadianDollar").innerHTML=(temp*1.31)
+   document.querySelector(".TurkishLira").innerHTML=(temp*7.96)
+   document.querySelector(".JapaneseYen").innerHTML=(temp*104.76)
+   document.querySelector(".SwissFranc").innerHTML=(temp*0.90)
+   }
+   function clearinfo() {
+        document.theform.dollarFmInput.value = " ";
+        
+        document.getElementById("dollarFmInput").innerHTML = " ";
+    }
+    </script>
+</form>
+</body><br><br><br>
+
+<a href="http://csnet.southtexascollege.edu/localuser/jflor118/">Go Back To Homepage: Juan L. Flores</a>
+
+</html>
